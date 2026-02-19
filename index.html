@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Website</title>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','YOUR_GTM_ID');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=YOUR_GTM_ID"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Insert your biography here.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Details about your projects.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" name="name" required placeholder="Your Name">
+            <input type="email" name="email" required placeholder="Your Email">
+            <textarea name="message" required placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <section id="newsletter">
+        <h2>Sign Up for My Newsletter</h2>
+        <form id="newsletter-form">
+            <input type="email" name="email" required placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Track form submission event
+            dataLayer.push({'event': 'formSubmission', 'formId': 'contact-form'});
+            // Implement form submission logic here.
+        });
+        
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Track newsletter signup event
+            dataLayer.push({'event': 'newsletterSignup', 'formId': 'newsletter-form'});
+            // Implement newsletter subscription logic here.
+        });
+    </script>
+</body>
+</html>
